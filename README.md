@@ -22,7 +22,7 @@
   <h4>2023.06.21 ~ 2023.07.13
 </h4>
 
-[ <img src="https://img.shields.io/badge/notion-181717?style=flat&logo=notion&logoColor=fff" />](https://www.notion.so/1-Re-Fresh-6989bdd8122e4c10bc766c6aa68bc91f)&nbsp;&nbsp;&nbsp;[<img src="https://img.shields.io/badge/Figma-F24E1E?style=flat&logo=Figma&logoColor=fff" />](https://www.figma.com/file/0W9b8cdZ4huQ1sGAHMMqme/Re%3AFresh?type=design&node-id=0-1&mode=design&t=8YLTk6kFseSVA6t2-0)
+[ <img src="https://img.shields.io/badge/notion-181717?style=flat&logo=notion&logoColor=fff" />]([https://www.notion.so/1-Re-Fresh-6989bdd8122e4c10bc766c6aa68bc91f](https://www.notion.so/77d9d562da4f4215923ee6ae167ba5cb?v=bfcd82c4cfca4cf79e4a9451ac05e95c&p=73deb1f260074fec8ca0c620b90b7922&pm=s))&nbsp;&nbsp;&nbsp;[<img src="https://img.shields.io/badge/Figma-F24E1E?style=flat&logo=Figma&logoColor=fff" />](https://www.figma.com/file/0W9b8cdZ4huQ1sGAHMMqme/Re%3AFresh?type=design&node-id=0-1&mode=design&t=8YLTk6kFseSVA6t2-0)
 
 </div>
 <br/>
