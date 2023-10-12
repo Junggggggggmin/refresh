@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.refresh.product.PdtMapper">
+    <insert id="insPdt">
+        INSERT INTO t_product
+        SET iplan = #{iplan}
+        , icate = #{icate}
+        , nm = #{nm}
+        , cnt = #{cnt}
+        , iunit = #{iunit}
+        , w_iuser = #{wIuser}
+    </insert>
+
+    <select id="selPdt" resultType="PdtSelVo">
+        SELECT A.iproduct, A.icate, A.iunit, C.nm cateNm, A.nm, A.cnt, D.nm unitNm, E.nm wUserNm, A.finish_yn finishYn
+        FROM t_product A
+        INNER JOIN t_plan B
+        ON A.iplan = B.iplan
+        INNER JOIN t_category C
+        ON A.icate = C.icate
+        INNER JOIN t_unit D
+        ON A.iunit = D.iunit
+        INNER JOIN t_user E
+        ON A.w_iuser = E.iuser
+        WHERE B.igroup = #{igroup}
+        AND B.iplan = #{iplan}
+        AND A.del_yn = 0
+        ORDER BY A.finish_yn
+        , A.buy_at DESC
+    </select>
+
+    <update id="updPdt">
+        UPDATE t_product
+        SET
+        icate = #{icate}
+        , nm = #{nm}
+        , cnt = #{cnt}
+        , iunit = #{iunit}
+        , buy_at = current_timestamp()
+        WHERE iproduct = #{iproduct}
+    </update>
+
+    <update id="finishPdt">
+        <selectKey keyProperty="finishYn" resultType="PdtEntity" order="AFTER">
+            SELECT finish_yn finishYn FROM t_product WHERE iproduct = #{iproduct}
+        </selectKey>
+        UPDATE t_product
+        SET finish_yn = 1 - finish_yn
+        , buy_at = current_timestamp()
+        WHERE iproduct = #{iproduct}
+    </update>
+
+    <update id="delPdt">
+        UPDATE t_product
+        SET del_yn = 1
+        WHERE iproduct = #{iproduct}
+    </update>
+
+
+
+</mapper>
